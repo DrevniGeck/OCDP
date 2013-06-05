@@ -30,9 +30,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#generalDataProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#generalDataProperties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hasCPU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hasCPU">
+        <rdfs:comment>в состав аппаратной платформы входит процессор ...</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdPlatformDataProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hasRAM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hasRAM">
+        <rdfs:comment>в состав аппаратной платформы входит память ...</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdPlatformDataProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdComponentDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdComponentDataProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdPlatformDataProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdPlatformDataProperty"/>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#includeComponent -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#includeComponent"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#includeComponent">
+        <rdfs:comment>аппаратная платформа состоит из аппаратных компонент</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdPlatformDataProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#supportSWPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#supportSWPlatform">
+        <rdfs:comment>аппаратный компонент поддерживается программной платформой</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#hdComponentDataProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -55,6 +103,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#CPUDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#CPUDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ObjectDescription"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#HDComponent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#HDComponent"/>
@@ -67,6 +123,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ObjectDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ObjectDescription">
+        <rdfs:comment>Класс ObjectDescription и все его подклассы содержат один индивид, к которому привязываются все DataProperties для описания характеристик других классов</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#PlatformDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#PlatformDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ObjectDescription"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#RAM -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#RAM">
@@ -75,11 +147,26 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ROM -->
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#RAMDescription -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ROM">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#HDComponent"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#RAMDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-19#ObjectDescription"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&owl;topObjectProperty">
+        <rdfs:comment>Свойства сгруппированы по видам аппаратных средств
+Группа определяет объект в триплете </rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 

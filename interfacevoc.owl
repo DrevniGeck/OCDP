@@ -15,7 +15,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://localhost/guivocabluary"/>
+    <owl:Ontology rdf:about="http://osop.org/interfacevoc"/>
     
 
 
@@ -30,10 +30,29 @@
     
 
 
+    <!-- http://localhost/guivocabluary#cliObjectProperties -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#cliObjectProperties"/>
+    
+
+
+    <!-- http://localhost/guivocabluary#generalObjectProperties -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#generalObjectProperties"/>
+    
+
+
+    <!-- http://localhost/guivocabluary#guiObjectProperties -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#guiObjectProperties"/>
+    
+
+
     <!-- http://localhost/guivocabluary#partOf -->
 
     <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#partOf">
         <rdfs:comment>Субъект входит в состав объекта, например виджет в состав GUI</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#generalObjectProperties"/>
     </owl:ObjectProperty>
     
 
@@ -42,6 +61,15 @@
 
     <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#sendData">
         <rdfs:comment>Субъект передает некоторые данные объеку</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#generalObjectProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost/guivocabluary#vsiObjectProperties -->
+
+    <owl:ObjectProperty rdf:about="http://localhost/guivocabluary#vsiObjectProperties">
+        <rdfs:comment>Video Stream Interface</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -57,27 +85,11 @@
     
 
 
-    <!-- http://localhost/guivocabluary#bImage -->
-
-    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#bImage">
-        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#buttonDataProperty"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://localhost/guivocabluary#bLabel -->
-
-    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#bLabel">
-        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#buttonDataProperty"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://localhost/guivocabluary#buttonDataProperty -->
 
-    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#buttonDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#buttonDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#guiDataProperties"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -87,12 +99,37 @@
     
 
 
+    <!-- http://localhost/guivocabluary#guiDataProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#guiDataProperties"/>
+    
+
+
+    <!-- http://localhost/guivocabluary#hasCaption -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#hasCaption">
+        <rdfs:comment>Имеет заголовок (текст)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#buttonDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://localhost/guivocabluary#hasID -->
 
     <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#hasID">
+        <rdfs:comment>Идентификатор элемента (число)</rdfs:comment>
         <rdfs:domain rdf:resource="http://localhost/guivocabluary#Structure"/>
         <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#generalDataProperty"/>
         <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost/guivocabluary#hasImage -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost/guivocabluary#hasImage">
+        <rdfs:comment>имеет изображение (ссылка на рисунок)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://localhost/guivocabluary#buttonDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -323,15 +360,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://localhost/guivocabluary#OnClick"/>
-            <rdf:Description rdf:about="http://localhost/guivocabluary#OnCommand"/>
-            <rdf:Description rdf:about="http://localhost/guivocabluary#OnKeypress"/>
-            <rdf:Description rdf:about="http://localhost/guivocabluary#OnSelect"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://localhost/guivocabluary#Box"/>
             <rdf:Description rdf:about="http://localhost/guivocabluary#Button"/>
             <rdf:Description rdf:about="http://localhost/guivocabluary#Image"/>
@@ -342,6 +370,15 @@
             <rdf:Description rdf:about="http://localhost/guivocabluary#Toolbar"/>
             <rdf:Description rdf:about="http://localhost/guivocabluary#Tree"/>
             <rdf:Description rdf:about="http://localhost/guivocabluary#Window"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://localhost/guivocabluary#OnClick"/>
+            <rdf:Description rdf:about="http://localhost/guivocabluary#OnCommand"/>
+            <rdf:Description rdf:about="http://localhost/guivocabluary#OnKeypress"/>
+            <rdf:Description rdf:about="http://localhost/guivocabluary#OnSelect"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

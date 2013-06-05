@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#"
+     xml:base="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#applicationObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#applicationObjectProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#basedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#basedOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#serviceObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#generalObjectPropery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#generalObjectPropery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#hasInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#generalObjectPropery"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#platformObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#platformObjectProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#runOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#runOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#applicationObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#serviceObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#serviceObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Application -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Application">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#ClientOperationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#ClientOperationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#OperationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#ServerOperationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#HyperVisorType2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#HyperVisorType2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Hypervisor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#HypervisorType1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Hypervisor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Hypervisor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#HypervisorType1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#HypervisorType1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Hypervisor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#OperationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#OperationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#ServerOperationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#ServerOperationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#OperationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Service">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#VirtualMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#VirtualMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Hypervisor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#OperationSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#VirtualMachine"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Application"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#SWPlatform"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/5/untitled-ontology-23#Service"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
