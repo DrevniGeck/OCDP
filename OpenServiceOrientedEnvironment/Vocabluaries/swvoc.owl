@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY swr "http://osop.org/swvoc#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://osop.org/swvoc#"
+     xml:base="http://osop.org/swvoc"
+     xmlns:swr="http://osop.org/swvoc#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://osop.org/swvoc">
+        <owl:imports rdf:resource="http://osop.org/interfacevoc"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://osop.org/swvoc#applicationObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&swr;applicationObjectProperty"/>
+    
+
+
+    <!-- http://osop.org/swvoc#basedOn -->
+
+    <owl:ObjectProperty rdf:about="&swr;basedOn">
+        <rdfs:subPropertyOf rdf:resource="&swr;serviceObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://osop.org/swvoc#generalObjectPropery -->
+
+    <owl:ObjectProperty rdf:about="&swr;generalObjectPropery"/>
+    
+
+
+    <!-- http://osop.org/swvoc#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="&swr;hasInterface">
+        <rdfs:subPropertyOf rdf:resource="&swr;generalObjectPropery"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://osop.org/swvoc#platformObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&swr;platformObjectProperty"/>
+    
+
+
+    <!-- http://osop.org/swvoc#runOn -->
+
+    <owl:ObjectProperty rdf:about="&swr;runOn">
+        <rdfs:subPropertyOf rdf:resource="&swr;applicationObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://osop.org/swvoc#serviceObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&swr;serviceObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://osop.org/swvoc#Application -->
+
+    <owl:Class rdf:about="&swr;Application">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#ClientOperationSystem -->
+
+    <owl:Class rdf:about="&swr;ClientOperationSystem">
+        <rdfs:subClassOf rdf:resource="&swr;OperationSystem"/>
+        <owl:disjointWith rdf:resource="&swr;ServerOperationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#HyperVisorType2 -->
+
+    <owl:Class rdf:about="&swr;HyperVisorType2">
+        <rdfs:subClassOf rdf:resource="&swr;Hypervisor"/>
+        <owl:disjointWith rdf:resource="&swr;HypervisorType1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#Hypervisor -->
+
+    <owl:Class rdf:about="&swr;Hypervisor">
+        <rdfs:subClassOf rdf:resource="&swr;SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#HypervisorType1 -->
+
+    <owl:Class rdf:about="&swr;HypervisorType1">
+        <rdfs:subClassOf rdf:resource="&swr;Hypervisor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#OperationSystem -->
+
+    <owl:Class rdf:about="&swr;OperationSystem">
+        <rdfs:subClassOf rdf:resource="&swr;SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#SWPlatform -->
+
+    <owl:Class rdf:about="&swr;SWPlatform">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#ServerOperationSystem -->
+
+    <owl:Class rdf:about="&swr;ServerOperationSystem">
+        <rdfs:subClassOf rdf:resource="&swr;OperationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#Service -->
+
+    <owl:Class rdf:about="&swr;Service">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://osop.org/swvoc#VirtualMachine -->
+
+    <owl:Class rdf:about="&swr;VirtualMachine">
+        <rdfs:subClassOf rdf:resource="&swr;SWPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&swr;Application"/>
+            <rdf:Description rdf:about="&swr;SWPlatform"/>
+            <rdf:Description rdf:about="&swr;Service"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&swr;Hypervisor"/>
+            <rdf:Description rdf:about="&swr;OperationSystem"/>
+            <rdf:Description rdf:about="&swr;VirtualMachine"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

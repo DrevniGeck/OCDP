@@ -1,0 +1,1371 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY gui "http://localhost/guivocabluary#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#"
+     xml:base="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:gui="http://localhost/guivocabluary#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14">
+        <owl:imports rdf:resource="http://localhost/guivocabluary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#accessBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#accessBy">
+        <rdfs:comment>К элементу GUI можно получить доступ либо по координатам, либо по идентификатору (handle)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#guiProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#basedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#basedOn">
+        <rdfs:comment>WebService основыватся на приложении</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#guiProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#guiProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasAsPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasAsPart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasAsPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasInterface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasInterface">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Interface"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasAsPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasWidjet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasWidjet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#runOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#runOn">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUClockrate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUClockrate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUcount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUcount">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HeadName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HeadName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#IdInterface -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#IdInterface">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#PhpLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#PhpLink">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Thumb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Thumb">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ThumbLarge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ThumbLarge">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#XmlLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#XmlLink">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebServicesDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#clickEffect -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#clickEffect">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#outputData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#outputData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#readonly -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#readonly">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#returnDataInt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#returnDataInt">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#returnDataString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#returnDataString">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#assocVisualElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CLI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CLI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ICalculatorPlus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Hardware"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory"/>
+        <rdfs:comment>Содержит три подкласса:
+  CPUModel (включает классы конкретных процессоров)
+  NIXCPU, WinCPU (эквиваленты для группирования процессоров по признаку поддержки Win или Nix платформ)
+
+Для классификации процессоров, поддерживающих строго одну платформу или несколько платформ, правило для эквивалентов включает как ограничение some, так и ограничение only</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPU"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasInterface"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ICalculatorPlus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#runOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GUI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusEdit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusEdit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GUI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ClientOS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ClientOS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OperationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerOS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GPSS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GPSS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GPSSCodeEditService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GPSSCodeEditService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#basedOn"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GPSS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GUI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#GUI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ICalculatorPlus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Hardware"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ICalculatorPlus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ICalculatorPlus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#IGPSS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#IGPSS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Interface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Interface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#LCalc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#LCalc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#runOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixCPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixCPU">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPU"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerOS"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixRAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixRAM">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixServer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixCPU"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixRAM"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OperationSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OperationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OracleVMVirtualBox -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OracleVMVirtualBox">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat2"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VMwareWorkstation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMLW -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMLW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Hardware"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerOS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerOS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OperationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerWL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerWL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMLW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServiceDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServiceDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SusieLinuxServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SusieLinuxServer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#NixPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VMWareESXServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VMWareESXServer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat1"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VMwareWorkstation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VMwareWorkstation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisorCat2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualRE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualRE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WebService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinCPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinCPU">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPU"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinRAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinRAM">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RandomAccessMemory"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#supportRunning"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinServer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasCPU"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinCPU"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#hasRAM"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WinRAM"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Windows2003Server -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Windows2003Server">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Windows2008Server"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Windows2008Server -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Windows2008Server">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#WindowsPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServerOS"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcServiceCliDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcServiceCliDescription">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServiceDescription"/>
+        <HeadName rdf:datatype="&xsd;string">Simple Calc Service (CLI)</HeadName>
+        <PhpLink rdf:datatype="&xsd;anyURI">http://sefero.ru/app/calcN.php</PhpLink>
+        <XmlLink rdf:datatype="&xsd;anyURI">http://sefero.ru/interface/content_app_interface_list.xml</XmlLink>
+        <ThumbLarge rdf:datatype="&xsd;anyURI">service_image/large_service2.jpg</ThumbLarge>
+        <Thumb rdf:datatype="&xsd;anyURI">service_image/thumb_service2.jpg</Thumb>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcServiceGuiDescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcServiceGuiDescription">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#ServiceDescription"/>
+        <HeadName rdf:datatype="&xsd;string">Simple Calc Service (GUI)</HeadName>
+        <PhpLink rdf:datatype="&xsd;anyURI">http://sefero.ru/app/calcN.php</PhpLink>
+        <XmlLink rdf:datatype="&xsd;anyURI">http://sefero.ru/interface/content_app_gui_list.xml</XmlLink>
+        <IdInterface rdf:datatype="&xsd;string">idcalc1</IdInterface>
+        <ThumbLarge rdf:datatype="&xsd;anyURI">service_image/large_service1.jpg</ThumbLarge>
+        <Thumb rdf:datatype="&xsd;anyURI">service_image/thumb_service1.jpg</Thumb>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">124</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">125</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">126</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">127</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">128</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">129</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">130</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">131</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">132</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#button9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">133</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonClear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonClear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonDiv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonDiv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">90</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonMinus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonMinus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">93</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonMult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonMult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">91</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonPlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonPlus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">92</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonResult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#buttonResult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusButton"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+        <gui:hasID rdf:datatype="&xsd;integer">112</gui:hasID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#editResult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#editResult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CalculatorPlusEdit"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&gui;partOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#SimpleCalcService"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAM2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#RAMLW"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUL2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPULW2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#CPUW2"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Server3"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#Application"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#HyperVisor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#OperationSystem"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2013/4/untitled-ontology-14#VirtualRE"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
